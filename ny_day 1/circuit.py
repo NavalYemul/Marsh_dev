@@ -46,6 +46,7 @@ df.select(col("circuitId").alias("circuit_id"),"name").display()
 # COMMAND ----------
 
 # MAGIC %sql
+# remove this code
 # MAGIC select * from tablnamme
 
 # COMMAND ----------
