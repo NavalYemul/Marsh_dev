@@ -11,35 +11,25 @@ df=spark.read.csv("dbfs:/FileStore/tables/formula1/circuits.csv",header=True,inf
 
 # COMMAND ----------
 
-display(df)
-
-# COMMAND ----------
-
-dataframe function
-
-1.select 
-2. alias
-3. withColumnRenamed
-4. toDF
-5. withColumn
-6. drop
-
-
-
-functions
-1. col
-2. concat
-3. lit
-4. current_date
+# MAGIC %md
+# MAGIC Spark dataframe function
+# MAGIC
+# MAGIC 1.select 
+# MAGIC 2. alias
+# MAGIC 3. withColumnRenamed
+# MAGIC 4. toDF
+# MAGIC 5. withColumn
+# MAGIC 6. drop
+# MAGIC
+# MAGIC functions
+# MAGIC 1. col
+# MAGIC 2. concat
+# MAGIC 3. lit
+# MAGIC 4. current_date
 
 # COMMAND ----------
 
 df.select("circuitId","name")
-
-# COMMAND ----------
-
-spark is lazy evaluated
-T & A
 
 # COMMAND ----------
 
@@ -52,6 +42,11 @@ df.select("circuitId".alias("circuit_id"),"name").display()
 # COMMAND ----------
 
 df.select(col("circuitId").alias("circuit_id"),"name").display()
+
+# COMMAND ----------
+
+# MAGIC %sql
+# MAGIC select * from tablnamme
 
 # COMMAND ----------
 
